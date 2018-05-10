@@ -1,0 +1,4 @@
+cat bomb_code.ino | base64 > system.txt
+rm bomb_code.ino
+steghide embed -cf tower.jpg -ef system.txt -p bombhasbeenplanted
+rm system.txt
